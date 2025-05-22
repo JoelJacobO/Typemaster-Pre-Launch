@@ -76,7 +76,7 @@ button {
   color: var(--neutral-900);
 }
 .secondary__btn:focus {
-  outline: 4px solid var(--neutral-900);
+  outline: 2px solid var(--neutral-900);
   outline-offset: 4px;
 }
 .secondary__btn:hover {
@@ -89,7 +89,7 @@ button {
 }
 
 .primary__btn:focus {
-  outline: 4px solid var(--orange-500);
+  outline: 2px solid var(--orange-500);
   outline-offset: 4px;
 }
 .primary__btn:hover {
