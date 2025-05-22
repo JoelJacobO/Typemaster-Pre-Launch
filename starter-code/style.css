@@ -1,0 +1,420 @@
+/* barlow-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/barlow-v12-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/barlow-v12-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/barlow-v12-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+:root {
+  --orange-500: hsl(22, 89%, 52%);
+  --orange-300: hsl(22, 100%, 69%);
+  --neutral-900: hsl(220, 50%, 17%);
+  --neutral-400: hsl(221, 21%, 46%);
+  --neutral-200: hsl(198, 28%, 93%);
+  --neutral-0: hsl(0, 0%, 100%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Barlow", Arial, Helvetica, sans-serif;
+  color: var(--neutral-900);
+  padding-block: 2.4rem;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+button {
+  font-family: inherit;
+}
+
+.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+
+  padding: 1.2rem 1.6rem;
+
+  border: none;
+  outline: none;
+  border-radius: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary__btn {
+  background-color: var(--neutral-200);
+  color: var(--neutral-900);
+}
+.secondary__btn:focus {
+  outline: 4px solid var(--neutral-900);
+  outline-offset: 4px;
+}
+.secondary__btn:hover {
+  background-color: var(--neutral-900);
+  color: var(--neutral-0);
+}
+.primary__btn {
+  background-color: var(--orange-500);
+  color: var(--neutral-0);
+}
+
+.primary__btn:focus {
+  outline: 4px solid var(--orange-500);
+  outline-offset: 4px;
+}
+.primary__btn:hover {
+  background-color: var(--orange-300);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+header {
+  margin-bottom: 4.8rem;
+}
+.grid-main {
+  display: grid;
+  grid-template-columns: 0.6rem repeat(3, calc((100% - 3.2rem - 1rem * 2) / 3)) 0.6rem;
+  gap: 1rem;
+}
+.nav__flex {
+  grid-column: 2 / -2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section__hero {
+  margin-bottom: 2.4rem;
+}
+.hero__text {
+  grid-column: 2 / -2;
+  margin-bottom: 5.4rem;
+}
+.hero__img {
+  grid-column: 2 / -1;
+  border-radius: 2rem 0 0 2rem;
+}
+.hero__img img {
+  border-radius: 2rem 0 0 2rem;
+}
+
+.heading__primary {
+  font-size: 4.8rem;
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--neutral-900);
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+.hero__description,
+.detail__description,
+.feature__description {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--neutral-400);
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+.release__time {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--neutral-400);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.gray__block {
+  display: none;
+  background-color: var(--neutral-200);
+  height: 24rem;
+  border-radius: 2rem 0 0 2rem;
+}
+.section__detail {
+  margin-bottom: 6.4rem;
+}
+
+.detail__img--1 {
+  grid-column: 2 / 3;
+  border-radius: 0 2rem 2rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.detail__img--1::before {
+  content: "";
+  position: absolute;
+  background-color: var(--orange-500);
+  inset: 0;
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+}
+.detail__img--1 img {
+  height: 100%;
+}
+.detail__img--2 {
+  grid-column: 3 / -2;
+  margin-left: 1.4rem;
+}
+.detail__img--2 img {
+  border-radius: 2rem;
+  height: 100%;
+}
+.detail__text {
+  margin-top: 5.4rem;
+  grid-column: 2 / -2;
+}
+
+.heading__secondary {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: var(--neutral-900);
+  font-weight: 900;
+  margin-bottom: 2.4rem;
+}
+
+.detail__description {
+  margin-bottom: 0;
+}
+
+.section__feature {
+  margin-bottom: 6.4rem;
+}
+.feature {
+  grid-column: 2 / -2;
+  margin-bottom: 4rem;
+}
+.feature:last-child {
+  margin-bottom: 0;
+}
+.feature__icon {
+  height: 6.5rem;
+  width: 6.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.6rem;
+
+  background-color: var(--orange-500);
+  margin-bottom: 3.2rem;
+}
+.feature__description {
+  margin-bottom: 0;
+}
+.heading__tertiary {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  color: var(--neutral-900);
+  line-height: 1.1;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+footer {
+  margin-bottom: 2.4rem;
+}
+.footer__text {
+  grid-column: 2 / -2;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--neutral-400);
+}
+/* Wirelesss Section */
+
+@media (width >= 48em) {
+  body {
+    padding-block: 4rem;
+  }
+  .grid-main {
+    grid-template-columns:
+      1.2rem repeat(6, calc((100% - 6.4rem - 2rem * 5) / 6))
+      1.2rem;
+    gap: 2rem;
+  }
+  .btn {
+    padding: 1.6rem 2.4rem;
+  }
+  .section__hero {
+    margin-bottom: 4rem;
+  }
+  .hero__text {
+    grid-column: 2 / 5;
+    margin-bottom: 5.4rem;
+
+    align-self: center;
+  }
+  .hero__img {
+    grid-column: 5 / -1;
+    margin-left: 2.8rem;
+  }
+  .heading__primary {
+    margin-bottom: 3.2rem;
+    font-size: 5.6rem;
+  }
+  .hero__description {
+    margin-bottom: 4rem;
+  }
+  .section__detail {
+    margin-bottom: 8rem;
+  }
+  .detail__img--1 {
+    grid-column: 2 / 4;
+    border-radius: 2rem;
+  }
+
+  .detail__img--2 {
+    grid-column: 4 / -2;
+    margin-left: 1.2rem;
+  }
+  .detail__text {
+    margin-top: 2rem;
+    grid-column: 2 / -2;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .detail__text p {
+    width: 39.8rem;
+  }
+  .section__feature {
+    margin-bottom: 8rem;
+  }
+
+  .feature__1 {
+    grid-column: 2 / 5;
+  }
+  .feature__2 {
+    grid-column: 5 / -2;
+  }
+  .feature__3 {
+    grid-column: 2 / 5;
+  }
+  .feature__4 {
+    grid-column: 5 / -2;
+  }
+  footer {
+    margin-bottom: 4rem;
+  }
+  .footer__text {
+    grid-column: 2 / -2;
+  }
+}
+
+@media (width >= 75em) {
+  .grid-main {
+    grid-template-columns:
+      1fr repeat(12, calc((111rem - 2rem * 11) / 12))
+      1fr;
+    gap: 2rem;
+  }
+  .section__hero {
+    margin-bottom: 4rem;
+  }
+  .hero__text {
+    grid-column: 2 / 7;
+  }
+  .hero__img {
+    grid-column: 8 / -2;
+
+    margin-left: 0rem;
+  }
+  .hero__img img {
+    border-radius: 2rem 2rem 2rem 2rem;
+  }
+  .gray__block {
+    display: block;
+    grid-column: -2 / -1;
+  }
+  .heading__primary {
+    margin-bottom: 2.4rem;
+  }
+  .hero__description {
+    font-size: 1.8rem;
+    line-height: 1.687;
+    margin-bottom: 4rem;
+  }
+  .section__detail {
+    margin-bottom: 12rem;
+  }
+  .section__detail .gray__block {
+    grid-column: 1 / 2;
+    align-self: end;
+    border-radius: 0 2rem 2rem 0;
+  }
+  .detail__img--1 {
+    grid-column: 2 / 5;
+  }
+
+  .detail__img--2 {
+    grid-column: 5 / 10;
+  }
+  .detail__text {
+    grid-column: 11 / -2;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .heading__secondary {
+    margin-bottom: 2rem;
+  }
+  .detail__text p {
+    width: 100%;
+  }
+  .section__feature {
+    margin-bottom: 12rem;
+  }
+  .feature__1 {
+    grid-column: 2 / 5;
+  }
+  .feature__2 {
+    grid-column: 5 / 8;
+  }
+  .feature__3 {
+    grid-column: 8 / 11;
+  }
+  .feature__4 {
+    grid-column: 11 / -2;
+  }
+
+  .footer__text {
+    grid-column: 2 / -2;
+  }
+}
